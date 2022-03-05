@@ -1,3 +1,6 @@
+const ui = new UI()
+const ls = new LS()
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', addBook);
@@ -14,6 +17,7 @@ function addBook(event){
     const book = new Book(title, author, isbn)
 
     ui.addBook(book)
+    ls.addBook(book)
 
     titleInput.value = '';
     authorInput.value = '';
